@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Samask: jQuery Input Mask Plugin Demos</title>
+    <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.0/css/bulma.min.css">
+  </head>
+  <body>
+    <section class="hero is-fullheight" style="margin-top:150px">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <div class="column is-4 is-offset-4">
+            <h3 class="title has-text-grey">Samask: jQuery Input Mask Plugin Demos</h3>
+            <div class="box">
+              <form>
+                <div class="field">
+                  <div class="control">
+                    <input class="input is-large phone" type="type" placeholder="(000)000-0000">
+                  </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                      <input class="input is-large" type="type" placeholder="data-samask='(000)000-0000'" data-samask="(000)000-0000">
+                    </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="jquery.samask-masker.js"></script>
+    <script>
+      $(function() {
+        $.samaskHtml();
+        $('.phone').samask("(000)000-0000");
+        $('.hour').samask("00:00:00");
+        $('.date').samask("00/00/0000");
+        $('.date_hour').samask("00/00/0000 00:00:00");
+        $('.ip_address').samask("000.000.000.000");
+        $('.percent').samask("%00");
+        $('.mixed').samask("SSS-000");
+      });
+    </script>
+  </body>
+</html>
