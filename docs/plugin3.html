@@ -1,0 +1,48 @@
+
+<html>
+<head>
+<meta charset="utf-8" />
+<title>jQuery mask example</title>
+<meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
+<link href="http://www.jqueryscript.net/css/top.css" rel="stylesheet" type="text/css">
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript" src="src/jquery.maskx.js"></script>
+<script type="text/javascript">
+
+jQuery(document).ready(function(){
+	jQuery('input[name="telefone"]').maskx({maskx: 'phone'});
+	jQuery('input[name="tele"]').maskx({maskx: 'phone'});
+});
+</script>
+<style type="text/css">
+label {
+display: block;
+}
+label {
+margin-bottom: 10px;
+}
+</style>
+</head>
+<body>
+<div class="container-fluid" style="margin-top:20px;">
+<h1>jQuery maskx plugin</h1>
+	<div class="row">
+	<div class="col" style="background-color:orange;">
+		<label>
+			<span>Telephone</span>
+			<h3>Input type Text</h3>
+			<input type="text" name="telefone" maxlength="15" />
+		</label>
+	</div>
+	<div class="col" style="background-color:lavender;">
+		<label>
+			<span>Telephone</span>
+			<h3>Input type Tel</h3>
+			<input type="tel" name="tele" maxlength="15" />
+		</label>
+		</div>
+	</div>
+</div>
+</body>
+</html>
